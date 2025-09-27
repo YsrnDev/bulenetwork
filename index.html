@@ -1,0 +1,1143 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bule Network - Layanan Internet Tercepat & Terpercaya</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: {
+                            50: '#eef2ff',
+                            100: '#e0e7ff',
+                            500: '#667eea',
+                            600: '#5a67d8',
+                            700: '#4c51bf',
+                        },
+                        secondary: {
+                            500: '#f093fb',
+                            600: '#e879f9',
+                        }
+                    },
+                    animation: {
+                        'float': 'float 20s infinite linear',
+                        'pulse-glow': 'pulse-glow 2s infinite',
+                        'bounce-slow': 'bounce 3s infinite',
+                    },
+                    backdropBlur: {
+                        xs: '2px',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            33% { transform: translateY(-30px) rotate(120deg); }
+            66% { transform: translateY(15px) rotate(240deg); }
+        }
+        @keyframes pulse-glow {
+            0%, 100% { box-shadow: 0 0 20px rgba(102, 126, 234, 0.5); }
+            50% { box-shadow: 0 0 40px rgba(102, 126, 234, 0.8); }
+        }
+        .gradient-text {
+            background: linear-gradient(45deg, #fbbf24, #f59e0b, #d97706);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
+</head>
+<body class="font-inter bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100 transition-colors duration-300">
+    <!-- Background Elements -->
+    <div class="fixed inset-0 pointer-events-none overflow-hidden">
+        <div class="absolute w-72 h-72 bg-gradient-to-br from-primary-500 to-purple-600 rounded-full opacity-10 animate-float -top-10 -right-10"></div>
+        <div class="absolute w-48 h-48 bg-gradient-to-br from-secondary-500 to-pink-600 rounded-full opacity-10 animate-float bottom-20 -left-5" style="animation-delay: -7s;"></div>
+        <div class="absolute w-36 h-36 bg-gradient-to-br from-blue-400 to-cyan-400 rounded-full opacity-10 animate-float top-60 right-80" style="animation-delay: -14s;"></div>
+    </div>
+
+    <header>
+        <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-300 bg-gradient-to-r from-primary-500 to-purple-600">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="flex justify-between items-center py-4">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-lg flex items-center justify-center text-xl animate-pulse-glow">⚡</div>
+                        <h2 class="text-2xl font-bold text-white">Bule Network</h2>
+                    </div>
+                    <ul class="hidden lg:flex space-x-8">
+                        <li><a href="#beranda" class="text-white/90 hover:text-white font-medium transition-colors duration-200 relative group">
+                            Beranda
+                            <span class="absolute -bottom-1 left-1/2 w-0 h-0.5 bg-white group-hover:w-full group-hover:left-0 transition-all duration-200"></span>
+                        </a></li>
+                        <li><a href="#pembayaran" class="text-white/90 hover:text-white font-medium transition-colors duration-200 relative group">
+                            Bayar Tagihan
+                            <span class="absolute -bottom-1 left-1/2 w-0 h-0.5 bg-white group-hover:w-full group-hover:left-0 transition-all duration-200"></span>
+                        </a></li>
+                        <li><a href="#paket" class="text-white/90 hover:text-white font-medium transition-colors duration-200 relative group">
+                            Paket
+                            <span class="absolute -bottom-1 left-1/2 w-0 h-0.5 bg-white group-hover:w-full group-hover:left-0 transition-all duration-200"></span>
+                        </a></li>
+                        <li><a href="#tentang" class="text-white/90 hover:text-white font-medium transition-colors duration-200 relative group">
+                            Tentang
+                            <span class="absolute -bottom-1 left-1/2 w-0 h-0.5 bg-white group-hover:w-full group-hover:left-0 transition-all duration-200"></span>
+                        </a></li>
+                        <li><a href="#kontak" class="text-white/90 hover:text-white font-medium transition-colors duration-200 relative group">
+                            Kontak
+                            <span class="absolute -bottom-1 left-1/2 w-0 h-0.5 bg-white group-hover:w-full group-hover:left-0 transition-all duration-200"></span>
+                        </a></li>
+			<li><a href="#testimoni" class="text-white/90 hover:text-white font-medium transition-colors duration-200 relative group">
+                            Testimoni
+                            <span class="absolute -bottom-1 left-1/2 w-0 h-0.5 bg-white group-hover:w-full group-hover:left-0 transition-all duration-200"></span>
+                        </a></li>
+                    </ul>
+                    <div class="flex items-center space-x-4">
+                        <button id="admin-login" class="w-10 h-10 bg-white/20 border border-white/30 rounded-lg flex items-center justify-center hover:scale-105 transition-transform duration-200 backdrop-blur-sm group" title="Admin Login">
+                            <span class="text-lg transition-all duration-300 group-hover:scale-110">👤</span>
+                        </button>
+                        <button id="theme-toggle" class="w-10 h-10 bg-white/20 border border-white/30 rounded-lg flex items-center justify-center hover:scale-105 transition-transform duration-200 backdrop-blur-sm">
+                            <span class="sun-icon text-lg transition-all duration-300">☀️</span>
+                            <span class="moon-icon text-lg transition-all duration-300 absolute opacity-0">🌙</span>
+                        </button>
+                        <div id="hamburger" class="hamburger lg:hidden flex flex-col space-y-1 cursor-pointer p-2 rounded-md hover:bg-white/10 transition-colors duration-200">
+                            <span class="w-6 h-0.5 bg-white rounded transition-all duration-300"></span>
+                            <span class="w-6 h-0.5 bg-white rounded transition-all duration-300"></span>
+                            <span class="w-6 h-0.5 bg-white rounded transition-all duration-300"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="lg:hidden fixed top-20 left-0 w-full bg-white dark:bg-slate-800 backdrop-blur-lg border-t border-white/20 transform -translate-x-full transition-transform duration-300 rounded-b-2xl shadow-xl">
+                <ul class="py-6 space-y-4 text-center">
+                    <li><a href="#beranda" class="block py-3 px-6 mx-4 rounded-lg text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors duration-200">Beranda</a></li>
+                    <li><a href="#pembayaran" class="block py-3 px-6 mx-4 rounded-lg text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors duration-200">Bayar Tagihan</a></li>
+                    <li><a href="#paket" class="block py-3 px-6 mx-4 rounded-lg text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors duration-200">Paket</a></li>
+                    <li><a href="#tentang" class="block py-3 px-6 mx-4 rounded-lg text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors duration-200">Tentang</a></li>
+                    <li><a href="#testimoni" class="block py-3 px-6 mx-4 rounded-lg text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors duration-200">Testimoni</a></li>
+                    <li><a href="#kontak" class="block py-3 px-6 mx-4 rounded-lg text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors duration-200">Kontak</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="beranda" class="min-h-screen bg-gradient-to-br from-primary-500 via-purple-600 to-blue-600 relative overflow-hidden flex items-center pt-20 md:pt-24">
+            <!-- Hero Pattern Background -->
+            <div class="absolute inset-0 opacity-10">
+                <div class="absolute inset-0" style="background-image: url('data:image/svg+xml,<svg width=&quot;60&quot; height=&quot;60&quot; viewBox=&quot;0 0 60 60&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;><g fill=&quot;none&quot; fill-rule=&quot;evenodd&quot;><g fill=&quot;%23ffffff&quot; fill-opacity=&quot;0.05&quot;><circle cx=&quot;30&quot; cy=&quot;30&quot; r=&quot;2&quot;/></g></svg>'); background-size: 60px 60px; animation: heroPattern 20s linear infinite;"></div>
+            </div>
+
+            <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center relative z-10">
+                <div class="text-white space-y-8">
+                    <div class="inline-block animate-bounce">
+                        <span class="bg-white/20 backdrop-blur-md px-4 py-2 rounded-full text-sm font-medium border border-white/30">
+                            ✨ Teknologi Terdepan
+                        </span>
+                    </div>
+
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight animate-fade-in-up">
+                        Internet <span class="gradient-text">Super Cepat</span>
+                        <br>untuk Masa Depan
+                    </h1>
+
+                    <p class="text-xl text-white/90 leading-relaxed max-w-2xl animate-fade-in-up" style="animation-delay: 0.2s;">
+                        Rasakan pengalaman internet fiber optik dengan kecepatan hingga 1 Gbps.
+                        Streaming 4K, gaming tanpa lag, dan produktivitas tanpa batas!
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row gap-4 animate-fade-in-up" style="animation-delay: 0.4s;">
+                        <a href="#paket" class="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-8 py-4 rounded-full font-semibold hover:scale-105 transform transition-all duration-200 shadow-lg hover:shadow-xl animate-pulse-glow">
+                            <span>Berlangganan Sekarang</span>
+                        </a>
+                        <a href="#paket" class="bg-white/10 backdrop-blur-md border border-white/30 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/20 transition-all duration-200 group">
+                            <span>Lihat Paket</span>
+                            <span class="ml-2 group-hover:translate-x-1 transition-transform duration-200">→</span>
+                        </a>
+                    </div>
+
+                    <div class="flex justify-center lg:justify-start space-x-8 pt-8 animate-fade-in-up" style="animation-delay: 0.6s;">
+                        <div class="text-center">
+                            <div class="text-3xl font-bold">50K+</div>
+                            <div class="text-white/80 text-sm">Pelanggan</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold">99.9%</div>
+                            <div class="text-white/80 text-sm">Uptime</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold">24/7</div>
+                            <div class="text-white/80 text-sm">Support</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex justify-center items-center animate-fade-in" style="animation-delay: 0.8s;">
+                    <div class="relative w-80 h-80">
+                        <!-- Speed Rings -->
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="absolute w-72 h-72 border-2 border-white/20 rounded-full animate-ping" style="animation-duration: 3s;"></div>
+                            <div class="absolute w-52 h-52 border-2 border-white/20 rounded-full animate-ping" style="animation-duration: 3s; animation-delay: 1s;"></div>
+                            <div class="absolute w-32 h-32 border-2 border-white/20 rounded-full animate-ping" style="animation-duration: 3s; animation-delay: 2s;"></div>
+                        </div>
+
+                        <!-- Speed Center -->
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="w-28 h-28 bg-white/10 backdrop-blur-lg border-2 border-white/30 rounded-full flex flex-col items-center justify-center">
+                                <div class="text-2xl font-bold text-white">1 Gbps</div>
+                                <div class="text-xs text-white/80">Max Speed</div>
+                            </div>
+                        </div>
+
+                        <!-- Data Particles -->
+                        <div class="absolute inset-0">
+                            <div class="absolute w-2 h-2 bg-white rounded-full animate-bounce" style="top: 20%; animation-delay: 0s; animation-duration: 4s;"></div>
+                            <div class="absolute w-2 h-2 bg-white rounded-full animate-bounce" style="top: 40%; animation-delay: 0.8s; animation-duration: 4s;"></div>
+                            <div class="absolute w-2 h-2 bg-white rounded-full animate-bounce" style="top: 60%; animation-delay: 1.6s; animation-duration: 4s;"></div>
+                            <div class="absolute w-2 h-2 bg-white rounded-full animate-bounce" style="top: 80%; animation-delay: 2.4s; animation-duration: 4s;"></div>
+                            <div class="absolute w-2 h-2 bg-white rounded-full animate-bounce" style="top: 30%; animation-delay: 3.2s; animation-duration: 4s;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="pembayaran" class="py-24 bg-slate-100 dark:bg-slate-900">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="text-center mb-16">
+                    <div class="inline-block mb-4">
+                        <span class="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-6 py-2 rounded-full text-sm font-semibold">
+                            💳 Pembayaran
+                        </span>
+                    </div>
+                    <h2 class="text-4xl lg:text-5xl font-bold text-slate-900 dark:text-white mb-4 bg-gradient-to-r from-primary-500 to-purple-600 bg-clip-text text-transparent">
+                        Bayar Tagihan Internet
+                    </h2>
+                    <p class="text-xl text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
+                        Mudah, cepat, dan aman. Bayar tagihan internet Anda kapan saja, di mana saja.
+                    </p>
+                </div>
+
+                <div class="grid lg:grid-cols-2 gap-16 items-start">
+                    <!-- Payment Form -->
+                    <div class="bg-white/70 dark:bg-slate-800/70 backdrop-blur-lg rounded-2xl p-8 shadow-xl border border-white/20 dark:border-slate-700/50">
+                        <div class="flex items-center justify-between mb-8">
+                            <h3 class="text-2xl font-bold text-slate-900 dark:text-white">Cek & Bayar Tagihan</h3>
+                            <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center text-xl">
+                                🔍
+                            </div>
+                        </div>
+
+                        <form id="payment-form" class="space-y-6">
+                            <div class="relative">
+                                <input
+                                    type="text"
+                                    id="customer-id"
+                                    name="customer-id"
+                                    placeholder=" "
+                                    required
+                                    class="w-full px-4 py-4 bg-transparent border-b-2 border-slate-300 dark:border-slate-600 focus:border-primary-500 outline-none text-lg text-slate-900 dark:text-white transition-colors duration-200 peer"
+                                >
+                                <label
+                                    for="customer-id"
+                                    class="absolute left-0 top-4 text-slate-500 dark:text-slate-400 text-lg transition-all duration-200 peer-focus:-top-2 peer-focus:text-sm peer-focus:text-primary-500 peer-[:not(:placeholder-shown)]:-top-2 peer-[:not(:placeholder-shown)]:text-sm peer-[:not(:placeholder-shown)]:text-primary-500"
+                                >
+                                    ID Pelanggan
+                                </label>
+                                <div class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary-500 to-purple-600 transition-all duration-200 peer-focus:w-full"></div>
+                                <small class="block mt-2 text-slate-500 dark:text-slate-400 text-sm italic">
+                                    Gunakan ID pelanggan yang tertera di tagihan Anda (contoh: INT001)
+                                </small>
+                            </div>
+
+                            <button
+                                type="submit"
+                                class="w-full bg-gradient-to-r from-primary-500 to-purple-600 text-white py-4 rounded-full font-semibold hover:scale-105 transition-transform duration-200 shadow-lg hover:shadow-xl"
+                            >
+                                <span>Cek Tagihan</span>
+                            </button>
+                        </form>
+
+                        <!-- Bill Info -->
+                        <div id="bill-info" class="mt-8 bg-white/70 dark:bg-slate-700/70 backdrop-blur-lg rounded-2xl p-6 border border-white/20 dark:border-slate-600/50 hidden">
+                            <div class="mb-6 pb-4 border-b border-slate-200 dark:border-slate-600">
+                                <div class="flex items-center justify-between">
+                                    <h4 class="text-xl font-bold text-slate-900 dark:text-white">Detail Tagihan</h4>
+                                    <span class="bg-gradient-to-r from-secondary-500 to-pink-600 text-white px-3 py-1 rounded-full text-xs font-semibold">
+                                        Belum Dibayar
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="space-y-4 mb-6">
+                                <div class="flex justify-between items-center py-3 border-b border-slate-100 dark:border-slate-600">
+                                    <span class="font-medium text-slate-600 dark:text-slate-400">Nama Pelanggan:</span>
+                                    <span id="customer-name" class="font-semibold text-slate-900 dark:text-white">-</span>
+                                </div>
+                                <div class="flex justify-between items-center py-3 border-b border-slate-100 dark:border-slate-600">
+                                    <span class="font-medium text-slate-600 dark:text-slate-400">Paket:</span>
+                                    <span id="package-type" class="font-semibold text-slate-900 dark:text-white">-</span>
+                                </div>
+                                <div class="flex justify-between items-center py-3 border-b border-slate-100 dark:border-slate-600">
+                                    <span class="font-medium text-slate-600 dark:text-slate-400">Periode:</span>
+                                    <span id="billing-period" class="font-semibold text-slate-900 dark:text-white">-</span>
+                                </div>
+                                <div class="flex justify-between items-center py-3 border-b border-slate-100 dark:border-slate-600">
+                                    <span class="font-medium text-slate-600 dark:text-slate-400">Jatuh Tempo:</span>
+                                    <span id="due-date" class="font-semibold text-slate-900 dark:text-white">-</span>
+                                </div>
+                                <div class="flex justify-between items-center py-4 bg-slate-50 dark:bg-slate-600 rounded-lg px-4 mt-2">
+                                    <span class="font-medium text-slate-600 dark:text-slate-400">Total Tagihan:</span>
+                                    <span id="total-amount" class="text-xl font-bold bg-gradient-to-r from-primary-500 to-purple-600 bg-clip-text text-transparent">-</span>
+                                </div>
+                            </div>
+
+                            <!-- Payment Methods -->
+                            <div class="mb-6">
+                                <h4 class="text-lg font-semibold text-slate-900 dark:text-white mb-4">Pilih Metode Pembayaran</h4>
+                                <div class="grid grid-cols-2 gap-4">
+                                    <label class="relative cursor-pointer">
+                                        <input type="radio" name="payment-method" value="bank-transfer" class="sr-only peer">
+                                        <div class="bg-white dark:bg-slate-700 border-2 border-slate-200 dark:border-slate-600 rounded-xl p-4 text-center hover:border-primary-500 peer-checked:border-primary-500 peer-checked:bg-primary-50 dark:peer-checked:bg-primary-900/20 transition-all duration-200">
+                                            <div class="text-3xl mb-2">🏦</div>
+                                            <span class="text-sm font-medium text-slate-700 dark:text-slate-300">Transfer Bank</span>
+                                            <div class="absolute top-2 right-2 w-5 h-5 bg-green-500 rounded-full flex items-center justify-center text-white text-xs opacity-0 peer-checked:opacity-100 transition-opacity duration-200">
+                                                ✓
+                                            </div>
+                                        </div>
+                                    </label>
+
+                                    <label class="relative cursor-pointer">
+                                        <input type="radio" name="payment-method" value="e-wallet" class="sr-only peer">
+                                        <div class="bg-white dark:bg-slate-700 border-2 border-slate-200 dark:border-slate-600 rounded-xl p-4 text-center hover:border-primary-500 peer-checked:border-primary-500 peer-checked:bg-primary-50 dark:peer-checked:bg-primary-900/20 transition-all duration-200">
+                                            <div class="text-3xl mb-2">📱</div>
+                                            <span class="text-sm font-medium text-slate-700 dark:text-slate-300">E-Wallet</span>
+                                            <div class="absolute top-2 right-2 w-5 h-5 bg-green-500 rounded-full flex items-center justify-center text-white text-xs opacity-0 peer-checked:opacity-100 transition-opacity duration-200">
+                                                ✓
+                                            </div>
+                                        </div>
+                                    </label>
+
+                                    <label class="relative cursor-pointer">
+                                        <input type="radio" name="payment-method" value="credit-card" class="sr-only peer">
+                                        <div class="bg-white dark:bg-slate-700 border-2 border-slate-200 dark:border-slate-600 rounded-xl p-4 text-center hover:border-primary-500 peer-checked:border-primary-500 peer-checked:bg-primary-50 dark:peer-checked:bg-primary-900/20 transition-all duration-200">
+                                            <div class="text-3xl mb-2">💳</div>
+                                            <span class="text-sm font-medium text-slate-700 dark:text-slate-300">Kartu Kredit</span>
+                                            <div class="absolute top-2 right-2 w-5 h-5 bg-green-500 rounded-full flex items-center justify-center text-white text-xs opacity-0 peer-checked:opacity-100 transition-opacity duration-200">
+                                                ✓
+                                            </div>
+                                        </div>
+                                    </label>
+
+                                    <label class="relative cursor-pointer">
+                                        <input type="radio" name="payment-method" value="virtual-account" class="sr-only peer">
+                                        <div class="bg-white dark:bg-slate-700 border-2 border-slate-200 dark:border-slate-600 rounded-xl p-4 text-center hover:border-primary-500 peer-checked:border-primary-500 peer-checked:bg-primary-50 dark:peer-checked:bg-primary-900/20 transition-all duration-200">
+                                            <div class="text-3xl mb-2">🏧</div>
+                                            <span class="text-sm font-medium text-slate-700 dark:text-slate-300">Virtual Account</span>
+                                            <div class="absolute top-2 right-2 w-5 h-5 bg-green-500 rounded-full flex items-center justify-center text-white text-xs opacity-0 peer-checked:opacity-100 transition-opacity duration-200">
+                                                ✓
+                                            </div>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <button
+                                type="button"
+                                id="pay-now"
+                                disabled
+                                class="w-full bg-gradient-to-r from-green-500 to-emerald-500 text-white py-4 rounded-full font-semibold hover:scale-105 transition-transform duration-200 shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
+                            >
+                                <span>Bayar Sekarang</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Payment Features -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-white/70 dark:bg-slate-800/70 backdrop-blur-lg rounded-2xl p-6 shadow-xl border border-white/20 dark:border-slate-700/50 text-center hover:scale-105 transition-transform duration-300">
+                            <div class="w-20 h-20 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center text-3xl mx-auto mb-4 relative overflow-hidden">
+                                <span class="relative z-10">⚡</span>
+                                <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -skew-x-12 animate-pulse"></div>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Pembayaran Instan</h3>
+                            <p class="text-slate-600 dark:text-slate-400">Tagihan langsung terbayar dan layanan aktif dalam hitungan menit</p>
+                        </div>
+
+                        <div class="bg-white/70 dark:bg-slate-800/70 backdrop-blur-lg rounded-2xl p-6 shadow-xl border border-white/20 dark:border-slate-700/50 text-center hover:scale-105 transition-transform duration-300">
+                            <div class="w-20 h-20 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full flex items-center justify-center text-3xl mx-auto mb-4 relative overflow-hidden">
+                                <span class="relative z-10">🔐</span>
+                                <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -skew-x-12 animate-pulse" style="animation-delay: 0.5s;"></div>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Keamanan Terjamin</h3>
+                            <p class="text-slate-600 dark:text-slate-400">Sistem pembayaran aman dengan enkripsi 256-bit SSL</p>
+                        </div>
+
+                        <div class="bg-white/70 dark:bg-slate-800/70 backdrop-blur-lg rounded-2xl p-6 shadow-xl border border-white/20 dark:border-slate-700/50 text-center hover:scale-105 transition-transform duration-300">
+                            <div class="w-20 h-20 bg-gradient-to-br from-yellow-500 to-orange-500 rounded-full flex items-center justify-center text-3xl mx-auto mb-4 relative overflow-hidden">
+                                <span class="relative z-10">💰</span>
+                                <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -skew-x-12 animate-pulse" style="animation-delay: 1s;"></div>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Tanpa Biaya Admin</h3>
+                            <p class="text-slate-600 dark:text-slate-400">Tidak ada biaya tambahan untuk pembayaran online</p>
+                        </div>
+
+                        <div class="bg-white/70 dark:bg-slate-800/70 backdrop-blur-lg rounded-2xl p-6 shadow-xl border border-white/20 dark:border-slate-700/50 text-center hover:scale-105 transition-transform duration-300">
+                            <div class="w-20 h-20 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center text-3xl mx-auto mb-4 relative overflow-hidden">
+                                <span class="relative z-10">📱</span>
+                                <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -skew-x-12 animate-pulse" style="animation-delay: 1.5s;"></div>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Multi Platform</h3>
+                            <p class="text-slate-600 dark:text-slate-400">Bayar melalui website, mobile app, atau SMS banking</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="paket" class="py-24 bg-slate-50 dark:bg-slate-800">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl lg:text-5xl font-bold text-slate-900 dark:text-white mb-4 bg-gradient-to-r from-primary-500 to-purple-600 bg-clip-text text-transparent">
+                        Pilih Paket yang Tepat untuk Anda
+                    </h2>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6 mt-16">
+                    <!-- Paket 15 Mbps -->
+                    <div class="bg-white dark:bg-slate-700 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-slate-200 dark:border-slate-600">
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-6 text-center">Paket 15 Mbps</h3>
+                        <div class="text-center mb-8">
+                            <span class="text-slate-600 dark:text-slate-400 text-base">Rp</span>
+                            <span class="text-4xl font-bold bg-gradient-to-r from-primary-500 to-purple-600 bg-clip-text text-transparent">150</span>
+                            <span class="text-slate-600 dark:text-slate-400 text-sm">ribu/bulan</span>
+                        </div>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center text-slate-700 dark:text-slate-300 text-sm">
+                                <span class="text-green-500 mr-3 text-lg">✓</span>
+                                Kecepatan hingga 15 Mbps
+                            </li>
+                            <li class="flex items-center text-slate-700 dark:text-slate-300 text-sm">
+                                <span class="text-green-500 mr-3 text-lg">✓</span>
+                                Unlimited Data
+                            </li>
+                            <li class="flex items-center text-slate-700 dark:text-slate-300 text-sm">
+                                <span class="text-green-500 mr-3 text-lg">✓</span>
+                                Support 24/7
+                            </li>
+                            <li class="flex items-center text-slate-700 dark:text-slate-300 text-sm">
+                                <span class="text-green-500 mr-3 text-lg">✓</span>
+                                Gratis Instalasi
+                            </li>
+                        </ul>
+                        <button class="w-full bg-gradient-to-r from-primary-500 to-purple-600 text-white py-3 rounded-full font-semibold hover:scale-105 transition-transform duration-200 shadow-lg hover:shadow-xl package-select-btn" data-package="15mbps" data-name="Paket 15 Mbps" data-price="Rp 150.000/bulan" data-speed="15 Mbps">
+                            Pilih Paket
+                        </button>
+                    </div>
+
+                    <!-- Paket 20 Mbps - TERPOPULER -->
+                    <div class="bg-white dark:bg-slate-700 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border-2 border-primary-500 relative overflow-visible lg:scale-105 mt-8 lg:mt-0">
+                        <!-- Popular Badge - Fixed positioning -->
+                        <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 z-10">
+                            <span class="bg-gradient-to-r from-secondary-500 to-pink-600 text-white px-4 py-2 rounded-full text-xs font-bold shadow-lg">
+                                TERPOPULER
+                            </span>
+                        </div>
+
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-6 text-center mt-4">Paket 20 Mbps</h3>
+                        <div class="text-center mb-8">
+                            <span class="text-slate-600 dark:text-slate-400 text-base">Rp</span>
+                            <span class="text-4xl font-bold bg-gradient-to-r from-primary-500 to-purple-600 bg-clip-text text-transparent">200</span>
+                            <span class="text-slate-600 dark:text-slate-400 text-sm">ribu/bulan</span>
+                        </div>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center text-slate-700 dark:text-slate-300 text-sm">
+                                <span class="text-green-500 mr-3 text-lg">✓</span>
+                                Kecepatan hingga 20 Mbps
+                            </li>
+                            <li class="flex items-center text-slate-700 dark:text-slate-300 text-sm">
+                                <span class="text-green-500 mr-3 text-lg">✓</span>
+                                Unlimited Data
+                            </li>
+                            <li class="flex items-center text-slate-700 dark:text-slate-300 text-sm">
+                                <span class="text-green-500 mr-3 text-lg">✓</span>
+                                Support 24/7
+                            </li>
+                            <li class="flex items-center text-slate-700 dark:text-slate-300 text-sm">
+                                <span class="text-green-500 mr-3 text-lg">✓</span>
+                                Gratis Instalasi
+                            </li>
+                        </ul>
+                        <button class="w-full bg-gradient-to-r from-primary-500 to-purple-600 text-white py-3 rounded-full font-semibold hover:scale-105 transition-transform duration-200 shadow-lg hover:shadow-xl package-select-btn" data-package="20mbps" data-name="Paket 20 Mbps" data-price="Rp 200.000/bulan" data-speed="20 Mbps">
+                            Pilih Paket
+                        </button>
+                    </div>
+
+                    <!-- Paket 30 Mbps -->
+                    <div class="bg-white dark:bg-slate-700 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-slate-200 dark:border-slate-600">
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-6 text-center">Paket 30 Mbps</h3>
+                        <div class="text-center mb-8">
+                            <span class="text-slate-600 dark:text-slate-400 text-base">Rp</span>
+                            <span class="text-4xl font-bold bg-gradient-to-r from-primary-500 to-purple-600 bg-clip-text text-transparent">250</span>
+                            <span class="text-slate-600 dark:text-slate-400 text-sm">ribu/bulan</span>
+                        </div>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center text-slate-700 dark:text-slate-300 text-sm">
+                                <span class="text-green-500 mr-3 text-lg">✓</span>
+                                Kecepatan hingga 30 Mbps
+                            </li>
+                            <li class="flex items-center text-slate-700 dark:text-slate-300 text-sm">
+                                <span class="text-green-500 mr-3 text-lg">✓</span>
+                                Unlimited Data
+                            </li>
+                            <li class="flex items-center text-slate-700 dark:text-slate-300 text-sm">
+                                <span class="text-green-500 mr-3 text-lg">✓</span>
+                                Support 24/7
+                            </li>
+                            <li class="flex items-center text-slate-700 dark:text-slate-300 text-sm">
+                                <span class="text-green-500 mr-3 text-lg">✓</span>
+                                Gratis Instalasi
+                            </li>
+                        </ul>
+                        <button class="w-full bg-gradient-to-r from-primary-500 to-purple-600 text-white py-3 rounded-full font-semibold hover:scale-105 transition-transform duration-200 shadow-lg hover:shadow-xl package-select-btn" data-package="25mbps" data-name="Paket 25 Mbps" data-price="Rp 250.000/bulan" data-speed="25 Mbps">
+                            Pilih Paket
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="tentang" class="py-24 bg-white dark:bg-slate-800">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl lg:text-5xl font-bold text-slate-900 dark:text-white mb-4 bg-gradient-to-r from-primary-500 to-purple-600 bg-clip-text text-transparent">
+                        Mengapa Memilih Bule Network?
+                    </h2>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="group bg-slate-50 dark:bg-slate-700 rounded-2xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-slate-200 dark:border-slate-600 relative overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-cyan-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <div class="relative z-10">
+                            <div class="text-5xl mb-6 animate-bounce-slow">⚡</div>
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-4">Kecepatan Tinggi</h3>
+                            <p class="text-slate-600 dark:text-slate-400 leading-relaxed">Teknologi fiber optik terdepan untuk kecepatan maksimal</p>
+                        </div>
+                    </div>
+
+                    <div class="group bg-slate-50 dark:bg-slate-700 rounded-2xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-slate-200 dark:border-slate-600 relative overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-br from-green-500/5 to-emerald-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <div class="relative z-10">
+                            <div class="text-5xl mb-6 animate-bounce-slow" style="animation-delay: 0.2s;">🔒</div>
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-4">Keamanan Terjamin</h3>
+                            <p class="text-slate-600 dark:text-slate-400 leading-relaxed">Proteksi berlapis untuk menjaga data dan privasi Anda</p>
+                        </div>
+                    </div>
+
+                    <div class="group bg-slate-50 dark:bg-slate-700 rounded-2xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-slate-200 dark:border-slate-600 relative overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-br from-yellow-500/5 to-orange-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <div class="relative z-10">
+                            <div class="text-5xl mb-6 animate-bounce-slow" style="animation-delay: 0.4s;">🏠</div>
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-4">Jangkauan Luas</h3>
+                            <p class="text-slate-600 dark:text-slate-400 leading-relaxed">Melayani seluruh wilayah kota dengan coverage terbaik</p>
+                        </div>
+                    </div>
+
+                    <div class="group bg-slate-50 dark:bg-slate-700 rounded-2xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-slate-200 dark:border-slate-600 relative overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-pink-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <div class="relative z-10">
+                            <div class="text-5xl mb-6 animate-bounce-slow" style="animation-delay: 0.6s;">🎯</div>
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-4">Support 24/7</h3>
+                            <p class="text-slate-600 dark:text-slate-400 leading-relaxed">Tim teknis siap membantu Anda kapan saja</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="kontak" class="py-24 bg-slate-100 dark:bg-slate-900">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl lg:text-5xl font-bold text-slate-900 dark:text-white mb-4 bg-gradient-to-r from-green-500 to-emerald-500 bg-clip-text text-transparent">
+                        Hubungi Kami
+                    </h2>
+                </div>
+
+                <div class="grid lg:grid-cols-2 gap-16">
+                    <!-- Contact Info -->
+                    <div class="space-y-8">
+                        <div class="group bg-white dark:bg-slate-800 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-slate-200 dark:border-slate-700 relative overflow-hidden">
+                            <div class="absolute inset-0 bg-gradient-to-r from-green-500/5 to-emerald-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            <div class="relative z-10">
+                                <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3 flex items-center">
+                                    <span class="text-2xl mr-3">📞</span>
+                                    Telepon
+                                </h3>
+                                <p class="text-slate-600 dark:text-slate-400 text-lg">0800-1234-5678</p>
+                            </div>
+                        </div>
+
+                        <div class="group bg-white dark:bg-slate-800 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-slate-200 dark:border-slate-700 relative overflow-hidden">
+                            <div class="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-cyan-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            <div class="relative z-10">
+                                <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3 flex items-center">
+                                    <span class="text-2xl mr-3">📧</span>
+                                    Email
+                                </h3>
+                                <p class="text-slate-600 dark:text-slate-400 text-lg">info@bulenetwork.com</p>
+                            </div>
+                        </div>
+
+                        <div class="group bg-white dark:bg-slate-800 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-slate-200 dark:border-slate-700 relative overflow-hidden">
+                            <div class="absolute inset-0 bg-gradient-to-r from-purple-500/5 to-pink-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            <div class="relative z-10">
+                                <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3 flex items-center">
+                                    <span class="text-2xl mr-3">📍</span>
+                                    Alamat
+                                </h3>
+                                <p class="text-slate-600 dark:text-slate-400 text-lg">
+                                    Jl. Teknologi No. 123<br>
+                                    Jakarta Selatan, 12345
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="bg-white/70 dark:bg-slate-800/70 backdrop-blur-lg rounded-2xl p-8 shadow-xl border border-white/20 dark:border-slate-700/50">
+                        <form id="contact-form" class="space-y-6">
+                            <div>
+                                <input
+                                    type="text"
+                                    id="contact-name"
+                                    placeholder="Nama Lengkap"
+                                    required
+                                    class="w-full px-4 py-4 bg-slate-50 dark:bg-slate-700 border border-slate-300 dark:border-slate-600 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 outline-none text-slate-900 dark:text-white transition-colors duration-200"
+                                >
+                            </div>
+
+                            <div>
+                                <input
+                                    type="email"
+                                    id="contact-email"
+                                    placeholder="Email"
+                                    required
+                                    class="w-full px-4 py-4 bg-slate-50 dark:bg-slate-700 border border-slate-300 dark:border-slate-600 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 outline-none text-slate-900 dark:text-white transition-colors duration-200"
+                                >
+                            </div>
+
+                            <div>
+                                <input
+                                    type="tel"
+                                    id="contact-phone"
+                                    placeholder="Nomor Telepon"
+                                    required
+                                    class="w-full px-4 py-4 bg-slate-50 dark:bg-slate-700 border border-slate-300 dark:border-slate-600 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 outline-none text-slate-900 dark:text-white transition-colors duration-200"
+                                >
+                            </div>
+
+                            <div>
+                                <select
+                                    id="contact-package"
+                                    required
+                                    class="w-full px-4 py-4 bg-slate-50 dark:bg-slate-700 border border-slate-300 dark:border-slate-600 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 outline-none text-slate-900 dark:text-white transition-colors duration-200"
+                                >
+                                    <option value="">Pilih Paket</option>
+                                    <option value="8mbps">Paket 8 Mbps - Rp 80.000</option>
+                                    <option value="10mbps">Paket 10 Mbps - Rp 100.000</option>
+                                    <option value="15mbps">Paket 15 Mbps - Rp 150.000</option>
+                                    <option value="20mbps">Paket 20 Mbps - Rp 200.000 (Terpopuler)</option>
+                                    <option value="25mbps">Paket 25 Mbps - Rp 250.000</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <textarea
+                                    id="contact-message"
+                                    placeholder="Pesan (Opsional)"
+                                    rows="4"
+                                    class="w-full px-4 py-4 bg-slate-50 dark:bg-slate-700 border border-slate-300 dark:border-slate-600 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 outline-none text-slate-900 dark:text-white transition-colors duration-200 resize-vertical"
+                                ></textarea>
+                            </div>
+
+                            <button
+                                type="submit"
+                                class="w-full bg-gradient-to-r from-green-500 to-emerald-500 text-white py-4 rounded-lg font-semibold hover:scale-105 transition-transform duration-200 shadow-lg hover:shadow-xl"
+                            >
+                                Kirim Pesan
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimoni" class="py-24 bg-gradient-to-br from-primary-500 via-purple-600 to-blue-600 relative overflow-hidden">
+            <!-- Background decorations -->
+            <div class="absolute inset-0 opacity-10">
+                <div class="absolute inset-0" style="background-image: url('data:image/svg+xml,<svg width=&quot;60&quot; height=&quot;60&quot; viewBox=&quot;0 0 60 60&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;><g fill=&quot;none&quot; fill-rule=&quot;evenodd&quot;><g fill=&quot;%23ffffff&quot; fill-opacity=&quot;0.05&quot;><circle cx=&quot;30&quot; cy=&quot;30&quot; r=&quot;2&quot;/></g></svg>'); background-size: 60px 60px;"></div>
+            </div>
+
+            <div class="max-w-7xl mx-auto px-6 relative z-10">
+                <div class="text-center mb-16">
+                    <div class="inline-block mb-4">
+                        <span class="bg-white/20 backdrop-blur-md px-6 py-2 rounded-full text-sm font-medium border border-white/30 text-white">
+                            ⭐ Testimonial
+                        </span>
+                    </div>
+                    <h2 class="text-4xl lg:text-5xl font-bold text-white mb-4">
+                        Apa Kata Pelanggan Kami?
+                    </h2>
+                    <p class="text-xl text-white/90 max-w-2xl mx-auto">
+                        Kepuasan pelanggan adalah prioritas utama kami. Dengar langsung pengalaman mereka.
+                    </p>
+                </div>
+
+                <!-- Testimonial Slider -->
+                <div class="relative max-w-4xl mx-auto">
+                    <!-- Slider Container -->
+                    <div id="testimonial-slider" class="overflow-hidden rounded-2xl">
+                        <div id="testimonial-track" class="flex transition-transform duration-500 ease-in-out">
+                            <!-- Testimonial 1 -->
+                            <div class="w-full flex-shrink-0 px-4">
+                                <div class="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-8 text-center">
+                                    <div class="flex justify-center items-center mb-6">
+                                        <div class="flex text-yellow-400 text-2xl">
+                                            ⭐⭐⭐⭐⭐
+                                        </div>
+                                    </div>
+                                    <blockquote class="text-white/95 text-xl leading-relaxed mb-8 italic">
+                                        "Internet dari Bule Network sangat stabil dan cepat! Streaming 4K tanpa buffering, gaming online tanpa lag. Pelayanan customer service juga responsif banget."
+                                    </blockquote>
+                                    <div class="flex items-center justify-center">
+                                        <div class="w-16 h-16 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full flex items-center justify-center text-white font-bold text-xl mr-4">
+                                            R
+                                        </div>
+                                        <div class="text-left">
+                                            <div class="text-white font-semibold text-lg">Rizki Pratama</div>
+                                            <div class="text-white/70">Paket 20 Mbps • Jakarta Selatan</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Testimonial 2 -->
+                            <div class="w-full flex-shrink-0 px-4">
+                                <div class="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-8 text-center">
+                                    <div class="flex justify-center items-center mb-6">
+                                        <div class="flex text-yellow-400 text-2xl">
+                                            ⭐⭐⭐⭐⭐
+                                        </div>
+                                    </div>
+                                    <blockquote class="text-white/95 text-xl leading-relaxed mb-8 italic">
+                                        "Sudah 2 tahun pakai Bule Network, downtime hampir tidak pernah ada. Harga terjangkau tapi kualitas premium. Sangat recommended!"
+                                    </blockquote>
+                                    <div class="flex items-center justify-center">
+                                        <div class="w-16 h-16 bg-gradient-to-br from-green-400 to-cyan-500 rounded-full flex items-center justify-center text-white font-bold text-xl mr-4">
+                                            S
+                                        </div>
+                                        <div class="text-left">
+                                            <div class="text-white font-semibold text-lg">Sari Dewi</div>
+                                            <div class="text-white/70">Paket 15 Mbps • Depok</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Testimonial 3 -->
+                            <div class="w-full flex-shrink-0 px-4">
+                                <div class="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-8 text-center">
+                                    <div class="flex justify-center items-center mb-6">
+                                        <div class="flex text-yellow-400 text-2xl">
+                                            ⭐⭐⭐⭐⭐
+                                        </div>
+                                    </div>
+                                    <blockquote class="text-white/95 text-xl leading-relaxed mb-8 italic">
+                                        "Sebagai freelancer yang butuh internet stabil, Bule Network adalah pilihan terbaik. Video call meeting lancar jaya, upload file cepat!"
+                                    </blockquote>
+                                    <div class="flex items-center justify-center">
+                                        <div class="w-16 h-16 bg-gradient-to-br from-purple-400 to-pink-500 rounded-full flex items-center justify-center text-white font-bold text-xl mr-4">
+                                            A
+                                        </div>
+                                        <div class="text-left">
+                                            <div class="text-white font-semibold text-lg">Ahmad Fauzi</div>
+                                            <div class="text-white/70">Paket 25 Mbps • Tangerang</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Testimonial 4 -->
+                            <div class="w-full flex-shrink-0 px-4">
+                                <div class="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-8 text-center">
+                                    <div class="flex justify-center items-center mb-6">
+                                        <div class="flex text-yellow-400 text-2xl">
+                                            ⭐⭐⭐⭐⭐
+                                        </div>
+                                    </div>
+                                    <blockquote class="text-white/95 text-xl leading-relaxed mb-8 italic">
+                                        "Instalasi cepat, teknisi ramah dan profesional. Internet langsung bisa dipakai dengan kecepatan sesuai yang dijanjikan. Top deh!"
+                                    </blockquote>
+                                    <div class="flex items-center justify-center">
+                                        <div class="w-16 h-16 bg-gradient-to-br from-blue-400 to-indigo-500 rounded-full flex items-center justify-center text-white font-bold text-xl mr-4">
+                                            M
+                                        </div>
+                                        <div class="text-left">
+                                            <div class="text-white font-semibold text-lg">Maya Sinta</div>
+                                            <div class="text-white/70">Paket 10 Mbps • Bekasi</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Testimonial 5 -->
+                            <div class="w-full flex-shrink-0 px-4">
+                                <div class="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-8 text-center">
+                                    <div class="flex justify-center items-center mb-6">
+                                        <div class="flex text-yellow-400 text-2xl">
+                                            ⭐⭐⭐⭐⭐
+                                        </div>
+                                    </div>
+                                    <blockquote class="text-white/95 text-xl leading-relaxed mb-8 italic">
+                                        "Keluarga besar saya semua pakai Bule Network. Bisa internetan bareng-bareng tanpa lemot. Anak-anak sekolah online lancar terus."
+                                    </blockquote>
+                                    <div class="flex items-center justify-center">
+                                        <div class="w-16 h-16 bg-gradient-to-br from-red-400 to-pink-500 rounded-full flex items-center justify-center text-white font-bold text-xl mr-4">
+                                            B
+                                        </div>
+                                        <div class="text-left">
+                                            <div class="text-white font-semibold text-lg">Budi Santoso</div>
+                                            <div class="text-white/70">Paket 20 Mbps • Bogor</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Testimonial 6 -->
+                            <div class="w-full flex-shrink-0 px-4">
+                                <div class="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-8 text-center">
+                                    <div class="flex justify-center items-center mb-6">
+                                        <div class="flex text-yellow-400 text-2xl">
+                                            ⭐⭐⭐⭐⭐
+                                        </div>
+                                    </div>
+                                    <blockquote class="text-white/95 text-xl leading-relaxed mb-8 italic">
+                                        "Pindah dari provider lain ke Bule Network, beda banget! Kecepatan konsisten, harga transparan, tidak ada biaya tersembunyi."
+                                    </blockquote>
+                                    <div class="flex items-center justify-center">
+                                        <div class="w-16 h-16 bg-gradient-to-br from-emerald-400 to-teal-500 rounded-full flex items-center justify-center text-white font-bold text-xl mr-4">
+                                            L
+                                        </div>
+                                        <div class="text-left">
+                                            <div class="text-white font-semibold text-lg">Linda Wijaya</div>
+                                            <div class="text-white/70">Paket 25 Mbps • Jakarta Barat</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Navigation Arrows -->
+                    <button id="prev-testimonial" class="absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-4 w-12 h-12 bg-white/20 backdrop-blur-lg border border-white/30 rounded-full flex items-center justify-center text-white hover:bg-white/30 transition-all duration-200 hover:scale-110">
+                        <span class="text-xl">‹</span>
+                    </button>
+                    <button id="next-testimonial" class="absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-4 w-12 h-12 bg-white/20 backdrop-blur-lg border border-white/30 rounded-full flex items-center justify-center text-white hover:bg-white/30 transition-all duration-200 hover:scale-110">
+                        <span class="text-xl">›</span>
+                    </button>
+
+                    <!-- Dots Indicator -->
+                    <div class="flex justify-center space-x-2 mt-8">
+                        <button class="testimonial-dot w-3 h-3 rounded-full bg-white/50 hover:bg-white/80 transition-all duration-200" data-slide="0"></button>
+                        <button class="testimonial-dot w-3 h-3 rounded-full bg-white/50 hover:bg-white/80 transition-all duration-200" data-slide="1"></button>
+                        <button class="testimonial-dot w-3 h-3 rounded-full bg-white/50 hover:bg-white/80 transition-all duration-200" data-slide="2"></button>
+                        <button class="testimonial-dot w-3 h-3 rounded-full bg-white/50 hover:bg-white/80 transition-all duration-200" data-slide="3"></button>
+                        <button class="testimonial-dot w-3 h-3 rounded-full bg-white/50 hover:bg-white/80 transition-all duration-200" data-slide="4"></button>
+                        <button class="testimonial-dot w-3 h-3 rounded-full bg-white/50 hover:bg-white/80 transition-all duration-200" data-slide="5"></button>
+                    </div>
+                </div>
+
+                <!-- Stats Section -->
+                <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                    <div class="text-white">
+                        <div class="text-4xl md:text-5xl font-bold mb-2">50K+</div>
+                        <div class="text-white/80 text-lg">Pelanggan Puas</div>
+                    </div>
+                    <div class="text-white">
+                        <div class="text-4xl md:text-5xl font-bold mb-2">4.9</div>
+                        <div class="text-white/80 text-lg">Rating Review</div>
+                    </div>
+                    <div class="text-white">
+                        <div class="text-4xl md:text-5xl font-bold mb-2">99.9%</div>
+                        <div class="text-white/80 text-lg">Uptime Network</div>
+                    </div>
+                    <div class="text-white">
+                        <div class="text-4xl md:text-5xl font-bold mb-2">24/7</div>
+                        <div class="text-white/80 text-lg">Customer Support</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-slate-900 dark:bg-slate-950 text-white py-16 relative overflow-hidden">
+        <!-- Decorative gradient -->
+        <div class="absolute inset-0 bg-gradient-to-br from-primary-500/10 to-purple-600/10 pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <!-- Company Info -->
+                <div>
+                    <h3 class="text-xl font-bold mb-6 text-white">Bule Network</h3>
+                    <p class="text-slate-400 leading-relaxed">
+                        Penyedia layanan internet terpercaya dengan teknologi terdepan untuk kebutuhan digital Anda.
+                    </p>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <h3 class="text-xl font-bold mb-6 text-white">Layanan</h3>
+                    <ul class="space-y-3">
+                        <li>
+                            <a href="#" class="text-slate-400 hover:text-white transition-colors duration-200 relative group">
+                                Internet Rumah
+                                <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-white group-hover:w-full transition-all duration-200"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-slate-400 hover:text-white transition-colors duration-200 relative group">
+                                Internet Bisnis
+                                <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-white group-hover:w-full transition-all duration-200"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-slate-400 hover:text-white transition-colors duration-200 relative group">
+                                Dedicated Line
+                                <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-white group-hover:w-full transition-all duration-200"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-slate-400 hover:text-white transition-colors duration-200 relative group">
+                                Cloud Service
+                                <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-white group-hover:w-full transition-all duration-200"></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Support -->
+                <div>
+                    <h3 class="text-xl font-bold mb-6 text-white">Dukungan</h3>
+                    <ul class="space-y-3">
+                        <li>
+                            <a href="#" class="text-slate-400 hover:text-white transition-colors duration-200 relative group">
+                                Pusat Bantuan
+                                <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-white group-hover:w-full transition-all duration-200"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-slate-400 hover:text-white transition-colors duration-200 relative group">
+                                Status Jaringan
+                                <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-white group-hover:w-full transition-all duration-200"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-slate-400 hover:text-white transition-colors duration-200 relative group">
+                                Lapor Gangguan
+                                <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-white group-hover:w-full transition-all duration-200"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-slate-400 hover:text-white transition-colors duration-200 relative group">
+                                FAQ
+                                <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-white group-hover:w-full transition-all duration-200"></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Social Media -->
+                <div>
+                    <h3 class="text-xl font-bold mb-6 text-white">Ikuti Kami</h3>
+                    <div class="flex flex-wrap gap-3">
+                        <a href="#" class="px-4 py-3 bg-slate-800 hover:bg-gradient-to-r hover:from-primary-500 hover:to-purple-600 rounded-lg transition-all duration-200 transform hover:-translate-y-1">
+                            Facebook
+                        </a>
+                        <a href="#" class="px-4 py-3 bg-slate-800 hover:bg-gradient-to-r hover:from-primary-500 hover:to-purple-600 rounded-lg transition-all duration-200 transform hover:-translate-y-1">
+                            Instagram
+                        </a>
+                        <a href="#" class="px-4 py-3 bg-slate-800 hover:bg-gradient-to-r hover:from-primary-500 hover:to-purple-600 rounded-lg transition-all duration-200 transform hover:-translate-y-1">
+                            Twitter
+                        </a>
+                        <a href="#" class="px-4 py-3 bg-slate-800 hover:bg-gradient-to-r hover:from-primary-500 hover:to-purple-600 rounded-lg transition-all duration-200 transform hover:-translate-y-1">
+                            LinkedIn
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="pt-8 border-t border-slate-800 text-center">
+                <p class="text-slate-400">&copy; 2025 Bule Network. Semua hak dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scroll-to-top" class="fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-primary-500 to-purple-600 text-white rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110 opacity-0 invisible z-50">
+        <span class="text-xl">↑</span>
+    </button>
+
+    <!-- Package Selection Modal -->
+    <div id="package-modal" class="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center p-4 opacity-0 invisible transition-all duration-300 z-50">
+        <div class="bg-white dark:bg-slate-800 rounded-2xl max-w-md w-full max-h-[90vh] overflow-y-auto transform scale-95 transition-all duration-300">
+            <!-- Modal Header -->
+            <div class="sticky top-0 bg-white dark:bg-slate-800 border-b border-slate-200 dark:border-slate-700 p-6 rounded-t-2xl">
+                <div class="flex items-center justify-between">
+                    <h3 class="text-2xl font-bold text-slate-900 dark:text-white">Berlangganan Paket</h3>
+                    <button id="close-modal" class="w-10 h-10 bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600 rounded-full flex items-center justify-center transition-colors duration-200">
+                        <span class="text-xl text-slate-600 dark:text-slate-400">×</span>
+                    </button>
+                </div>
+                <!-- Selected Package Display -->
+                <div id="selected-package-info" class="mt-4 p-4 bg-gradient-to-r from-primary-50 to-purple-50 dark:from-primary-900/20 dark:to-purple-900/20 rounded-lg border border-primary-200 dark:border-primary-700">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <div id="modal-package-name" class="font-semibold text-slate-900 dark:text-white">Paket yang Dipilih</div>
+                            <div id="modal-package-price" class="text-lg font-bold bg-gradient-to-r from-primary-500 to-purple-600 bg-clip-text text-transparent">Rp 0</div>
+                        </div>
+                        <div class="text-3xl">📦</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal Body -->
+            <div class="p-6">
+                <form id="package-order-form" class="space-y-4">
+                    <div>
+                        <label for="order-name" class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">Nama Lengkap *</label>
+                        <input
+                            type="text"
+                            id="order-name"
+                            name="name"
+                            required
+                            class="w-full px-4 py-3 bg-slate-50 dark:bg-slate-700 border border-slate-300 dark:border-slate-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none text-slate-900 dark:text-white transition-colors duration-200"
+                            placeholder="Masukkan nama lengkap Anda"
+                        >
+                    </div>
+
+                    <div>
+                        <label for="order-phone" class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">Nomor WhatsApp *</label>
+                        <input
+                            type="tel"
+                            id="order-phone"
+                            name="phone"
+                            required
+                            class="w-full px-4 py-3 bg-slate-50 dark:bg-slate-700 border border-slate-300 dark:border-slate-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none text-slate-900 dark:text-white transition-colors duration-200"
+                            placeholder="08123456789"
+                        >
+                    </div>
+
+                    <div>
+                        <label for="order-ktp" class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">Nomor KTP *</label>
+                        <input
+                            type="text"
+                            id="order-ktp"
+                            name="ktp"
+                            required
+                            class="w-full px-4 py-3 bg-slate-50 dark:bg-slate-700 border border-slate-300 dark:border-slate-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none text-slate-900 dark:text-white transition-colors duration-200"
+                            placeholder="3275 0511 1100 0014"
+                        >
+                        <small class="text-slate-500 dark:text-slate-400 text-sm mt-1 block">
+                            <span class="flex items-center">
+                                <span class="mr-1">ℹ️</span>
+                                Nomor KTP 16 digit diperlukan untuk proses berlangganan
+                            </span>
+                        </small>
+                    </div>
+
+                    <div>
+                        <label for="order-email" class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">Email</label>
+                        <input
+                            type="email"
+                            id="order-email"
+                            name="email"
+                            class="w-full px-4 py-3 bg-slate-50 dark:bg-slate-700 border border-slate-300 dark:border-slate-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none text-slate-900 dark:text-white transition-colors duration-200"
+                            placeholder="email@example.com (opsional)"
+                        >
+                    </div>
+
+                    <div>
+                        <label for="order-address" class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">Alamat Lengkap *</label>
+                        <textarea
+                            id="order-address"
+                            name="address"
+                            required
+                            rows="3"
+                            class="w-full px-4 py-3 bg-slate-50 dark:bg-slate-700 border border-slate-300 dark:border-slate-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none text-slate-900 dark:text-white transition-colors duration-200 resize-vertical"
+                            placeholder="Jl. Contoh No. 123, RT/RW, Kelurahan, Kecamatan, Kota"
+                        ></textarea>
+                    </div>
+
+                    <div>
+                        <label for="order-installation" class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">Preferensi Waktu Instalasi</label>
+                        <select
+                            id="order-installation"
+                            name="installation"
+                            class="w-full px-4 py-3 bg-slate-50 dark:bg-slate-700 border border-slate-300 dark:border-slate-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none text-slate-900 dark:text-white transition-colors duration-200"
+                        >
+                            <option value="">Pilih waktu instalasi</option>
+                            <option value="pagi">Pagi (08:00 - 12:00)</option>
+                            <option value="siang">Siang (12:00 - 16:00)</option>
+                            <option value="sore">Sore (16:00 - 18:00)</option>
+                            <option value="fleksibel">Fleksibel (sesuai jadwal teknisi)</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="order-notes" class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">Catatan Tambahan</label>
+                        <textarea
+                            id="order-notes"
+                            name="notes"
+                            rows="2"
+                            class="w-full px-4 py-3 bg-slate-50 dark:bg-slate-700 border border-slate-300 dark:border-slate-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none text-slate-900 dark:text-white transition-colors duration-200 resize-vertical"
+                            placeholder="Informasi tambahan (opsional)"
+                        ></textarea>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="flex gap-3 pt-4">
+                        <button
+                            type="button"
+                            id="cancel-order"
+                            class="flex-1 py-3 px-4 bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-300 rounded-lg font-semibold hover:bg-slate-300 dark:hover:bg-slate-600 transition-colors duration-200"
+                        >
+                            Batal
+                        </button>
+                        <button
+                            type="submit"
+                            class="flex-1 py-3 px-4 bg-gradient-to-r from-green-500 to-emerald-500 text-white rounded-lg font-semibold hover:scale-105 transition-transform duration-200 shadow-lg hover:shadow-xl"
+                        >
+                            Kirim ke WhatsApp
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
