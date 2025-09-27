@@ -352,7 +352,7 @@ class PaymentManager {
 class ContactManager {
     constructor() {
         this.form = document.getElementById('contact-form');
-        this.whatsappNumber = '6285156276320';
+        this.whatsappNumber = '6281246015380';
 
         this.init();
     }
@@ -374,11 +374,9 @@ class ContactManager {
 
         // Get package name for display
         const packageNames = {
-            '8mbps': 'Paket 8 Mbps - Rp 80.000',
-            '10mbps': 'Paket 10 Mbps - Rp 100.000',
             '15mbps': 'Paket 15 Mbps - Rp 150.000',
             '20mbps': 'Paket 20 Mbps - Rp 200.000 (Terpopuler)',
-            '25mbps': 'Paket 25 Mbps - Rp 250.000'
+            '30mbps': 'Paket 30 Mbps - Rp 250.000'
         };
 
         // Create WhatsApp message
@@ -743,7 +741,7 @@ class PackageModalManager {
         this.cancelBtn = document.getElementById('cancel-order');
         this.form = document.getElementById('package-order-form');
         this.packageButtons = document.querySelectorAll('.package-select-btn');
-        this.whatsappNumber = '6285156276320';
+        this.whatsappNumber = '6281246015380';
         this.selectedPackage = null;
 
         this.init();
