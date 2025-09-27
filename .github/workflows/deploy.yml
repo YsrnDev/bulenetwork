@@ -1,0 +1,46 @@
+name: Deploy Web ke VPS Nginx
+
+# Kapan workflow ini harus dijalankan
+on:
+  push:
+    # Workflow hanya berjalan ketika ada push ke branch 'main'
+    branches:
+      - main  
+
+# Definisi pekerjaan (jobs) yang akan dilakukan
+jobs:
+  deploy:
+    # Jalankan pekerjaan ini di lingkungan (runner) terbaru Ubuntu
+    runs-on: ubuntu-latest
+    
+    # Langkah-langkah (steps) yang akan dilakukan
+    steps:
+    
+    # Langkah 1: Checkout kode dari GitHub
+    - name: Checkout kode dari repo
+      uses: actions/checkout@v4
+
+    # Langkah 2: Deployment ke VPS via SSH
+    # Action ini menggunakan Kunci Rahasia SSH yang sudah disimpan di GitHub Secrets
+    - name: Deploy ke VPS melalui SSH
+      uses: appleboy/ssh-action@master 
+      with:
+        # Mengambil nilai dari GitHub Secrets yang sudah Anda atur
+        host: ${{ secrets.SSH_HOST }}
+        username: ${{ secrets.SSH_USERNAME }}
+        key: ${{ secrets.SSH_PRIVATE_KEY }}
+        
+        # Perintah yang akan dijalankan di dalam VPS setelah koneksi berhasil
+        script: |
+          # 1. Navigasi ke direktori root Nginx
+          cd /var/www/bulenetwork.com/html
+          
+          # 2. Tarik (Pull) perubahan terbaru dari repositori GitHub
+          # Perintah ini akan memperbarui berkas di VPS
+          git pull origin main
+          
+          # Catatan: Jika Anda tidak ingin menggunakan git pull, Anda bisa menggunakan rsync 
+          # atau perintah lain, tetapi 'git pull' adalah yang termudah di sini.
+          
+          # 3. (Opsional) Restart Nginx jika ada perubahan konfigurasi (biasanya tidak perlu)
+          # sudo systemctl reload nginx
