@@ -1,9 +1,3 @@
-# robots.txt untuk BuleNetwork.com
-
-# Izinkan semua web crawler (termasuk Google, Bing, dll.)
 User-agent: *
 Allow: /
-
-# Tentukan lokasi Sitemap Anda
-# Ganti URL di bawah dengan URL sitemap XML Anda yang sebenarnya
 Sitemap: https://bulenetwork.com/sitemap.xml
