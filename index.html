@@ -14,22 +14,29 @@
     <meta name="bingbot" content="index, follow">
     <meta name="yandex" content="index, follow">
     <meta name="format-detection" content="telephone=no">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Bule Network">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <meta name="apple-mobile-web-app-title" content="Bule Network">
-    
+    <meta name="msapplication-TileColor" content="#5a67d8">
+    <meta name="msapplication-TileImage" content="/img/logo.png">
+    <meta name="msapplication-config" content="/img/logo.png">
+   
+    <meta name="twitter:site" content="@BuleNetwork">
+    <meta name="twitter:creator" content="@BuleNetwork">
+    <meta name="twitter:domain" content="bulenetwork.com">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Internet Fiber Optic Bule Network | Kota Bekasi">
     <meta name="twitter:description" content="Layanan internet tercepat dan stabil untuk rumah dan bisnis Anda di Kota Bekasi.">
     <meta name="twitter:image" content="https://bulenetwork.com/img/logo.png">
-    <meta name="twitter:site" content="@BuleNetwork">
-    <meta name="twitter:creator" content="@BuleNetwork">
 
     <meta name="tiktok:site" content="@BuleNetwork">
+    <meta name="tiktok:creator" content="@BuleNetwork">
+    <meta name="tiktok:domain" content="bulenetwork.com">
     <meta name="tiktok:title" content="Internet Fiber Optic Bule Network | Kota Bekasi">
     <meta name="tiktok:description" content="Layanan internet tercepat dan stabil untuk rumah dan bisnis Anda di Kota Bekasi.">
     <meta name="tiktok:image" content="https://bulenetwork.com/img/logo.png">
-    <meta name="tiktok:creator" content="@BuleNetwork">
 
     <meta property="og:title" content="Internet Fiber Optic Bule Network | Kota Bekasi">
     <meta property="og:description" content="Layanan internet tercepat dan stabil untuk rumah dan bisnis Anda di Kota Bekasi.">
@@ -113,9 +120,13 @@
         <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-300 bg-gradient-to-r from-primary-500 to-purple-600">
             <div class="max-w-7xl mx-auto px-6">
                 <div class="flex justify-between items-center py-4">
-                    <div class="flex items-center space-x-3">
-                        <img class="w-10 h-10 rounded" src="/img/logo.png" alt="logo">
-                        <h2 class="text-2xl font-bold text-white"><a href="#beranda">Bule Network</a></h2>
+                    <div class="flex items-center space-x-2">
+                        <!-- Image only -->
+                        <div class="bg-[url(/img/logo.png)] bg-cover bg-center w-32 h-10 -ml-2 scale-125"></div>
+                        
+                        <!-- Image + Text -->
+                        <!-- <img class="bg-white w-12 h-12 rounded" src="/img/logo.png" alt="Bule Network Logo">
+                        <h2 class="text-2xl font-bold text-white"><a href="#beranda">Bule Network</a></h2> -->
                     </div>
                     <ul class="hidden lg:flex space-x-8">
                         <li><a href="#beranda" class="text-white/90 hover:text-white font-medium transition-colors duration-200 relative group">
@@ -175,7 +186,7 @@
     </header>
 
     <main>
-        <section id="beranda" class="min-h-screen bg-gradient-to-br from-primary-500 via-purple-600 to-blue-600 relative overflow-hidden flex items-center pt-20 md:pt-24">
+        <section id="beranda" class="min-h-screen bg-gradient-to-br from-primary-500 via-purple-600 to-blue-600 relative overflow-hidden flex items-center pt-24">
             <!-- Hero Pattern Background -->
             <div class="absolute inset-0 opacity-10">
                 <div class="absolute inset-0" style="background-image: url('data:image/svg+xml,<svg width=&quot;60&quot; height=&quot;60&quot; viewBox=&quot;0 0 60 60&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;><g fill=&quot;none&quot; fill-rule=&quot;evenodd&quot;><g fill=&quot;%23ffffff&quot; fill-opacity=&quot;0.05&quot;><circle cx=&quot;30&quot; cy=&quot;30&quot; r=&quot;2&quot;/></g></svg>'); background-size: 60px 60px; animation: heroPattern 20s linear infinite;"></div>
@@ -194,7 +205,7 @@
                         <br>Hemat di Kantong <span class="gradient-text">Warga</span>
                     </h1>
 
-                    <p class="text-xl text-white/90 leading-relaxed max-w-2xl animate-fade-in-up" style="animation-delay: 0.2s;">
+                    <p class="text-lg md:text-xl text-white/90 leading-relaxed max-w-2xl animate-fade-in-up" style="animation-delay: 0.2s;">
                         Upgrade jaringan lingkungan Anda! Rasakan kecepatan tinggi yang merata, bebas buffering, dan didukung oleh layanan dukungan yang mudah dihubungi.
                     </p>
 
